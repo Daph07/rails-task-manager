@@ -5,6 +5,10 @@
 <li>
   <%= link_to task.title, task_path(task) %>
   <%= task.completed %>
+  <%= link_to 'delete',
+                    task_path(task),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
 </li>
 <% end %>
 </ul>
